@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:property-placeholder location="classpath:config/config-${environment}.properties"/>
+
+    <!--<beans profile="default">
+        <context:property-placeholder location="classpath:config/config-development.properties"/>
+    </beans>
+    <beans profile="dev">
+        <context:property-placeholder location="classpath:config/config-development.properties"/>
+    </beans>
+    <beans profile="test">
+        <context:property-placeholder location="classpath:config/config-test.properties"/>
+    </beans>
+    <beans profile="emu">
+        <context:property-placeholder location="classpath:config/config-emulation.properties"/>
+    </beans>
+    <beans profile="prod">
+        <context:property-placeholder location="classpath:config/config-production.properties"/>
+    </beans>
+    <beans>
+        <import resource="spring-dao.xml"/>
+        <import resource="spring-service.xml"/>
+        <import resource="spring-transaction.xml"/>
+    </beans>-->
+    <import resource="spring-dao.xml"/>
+    <import resource="spring-service.xml"/>
+    <import resource="spring-transaction.xml"/>
+</beans>
